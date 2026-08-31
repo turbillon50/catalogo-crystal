@@ -1,0 +1,26 @@
+{
+  "name": "catalogo-crystal",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Catalogo Crystal - liquid glass con distorsion SVG real (feDisplacementMap), motor de haptica/luz-cursor/reveal. Repo separado de catalogo-compoentes, sin mezclar tokens ni componentes.",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "next": "14.2.35",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "framer-motion": "^11.3.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "typescript": "^5",
+    "tailwindcss": "^3.4.7",
+    "postcss": "^8",
+    "autoprefixer": "^10"
+  }
+}
