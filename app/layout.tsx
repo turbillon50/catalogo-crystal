@@ -1,15 +1,30 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import "./crystal-ui.css";
+import { CrystalFilters } from "@/components/crystal/CrystalFilters";
+import { CrystalEngine } from "@/components/crystal/CrystalEngine";
 
 export const metadata: Metadata = {
   title: "Catálogo Crystal",
-  description: "Liquid glass con distorsión SVG real — motor de háptica/luz-cursor/reveal.",
+  description: "Liquid glass premium — distorsión SVG real, háptica, luz-cursor, reveal.",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="es">
-      <body>{children}</body>
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+          rel="stylesheet"
+        />
+      </head>
+      <body>
+        <CrystalFilters />
+        <CrystalEngine />
+        {children}
+      </body>
     </html>
   );
 }
