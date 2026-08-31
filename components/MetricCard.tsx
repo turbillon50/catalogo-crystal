@@ -19,7 +19,7 @@ export function MetricCard({ label, value, delta, bars = [30, 45, 35, 55, 40, 60
       <div className="mb-4 flex items-center justify-between">
         <p className="text-sm text-[var(--cx-fg-muted)]">{label}</p>
         {delta && (
-          <span className="rounded-full bg-[var(--cx-green)]/15 px-2.5 py-1 text-xs font-medium text-[var(--cx-green)]">
+          <span className="rounded-full bg-[var(--cx-green-soft)] px-2.5 py-1 text-xs font-medium text-[var(--cx-green)]">
             {delta}
           </span>
         )}
@@ -33,7 +33,7 @@ export function MetricCard({ label, value, delta, bars = [30, 45, 35, 55, 40, 60
               "flex-1 rounded-t-sm transition-all",
               i === bars.length - 1
                 ? "bg-gradient-to-t from-[var(--cx-accent)] to-[var(--cx-teal)]"
-                : "bg-white/12"
+                : "bg-white/[0.12]"
             )}
             style={{ height: `${Math.max(8, (b / max) * 100)}%` }}
           />
